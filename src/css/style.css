@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+:root {
+    --blue: #3e8fa0;
+    --purple: #818ba4;
+    --gray: #333;
+    --dark-gray: #222;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+body, html {
+    background: #333333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: #222222;
+    color: #fff;
+    padding: 15px 35px;
+}
+
+.header__title {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.header__btn-add {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0 20px;
+    transition: all 0.2s ease;
+}
+.header__btn-add:hover {
+    background: var(--blue);
+    color: #fff;
+}
+
+
+
+/* Task Item */
+
+.not-tasks {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.not-tasks__title {
+    font-size: 64px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.task {
+    margin: 50px auto;
+    width: 800px;
+    background: var(--blue);
+    color: #fff;
+}
+
+.task__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    background: var(--dark-gray);
+    padding: 10px 15px;
+}
+
+.task__title {
+    width: 80%;
+    overflow: hidden;
+}
+
+.task__body {
+    padding: 15px;
+    max-height: calc(200px - 15px);
+    overflow: hidden;
+}
+
+.task__text {
+
+}
+
+.task__btn-delete, .task__btn-edit {
+    cursor: pointer;
+    margin-left: 10px;
+    transition: all 0.2s ease;
+}
+.task__btn-delete:hover, .task__btn-edit:hover {
+    color: var(--blue);
+}
+
+
+
+/* Modal */
+
+.modal {
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal__content {
+    background: #fff;
+    width: 500px;
+}
+
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-weight: 600;
+    background: var(--dark-gray);
+    padding: 10px 15px;
+    color: white;
+}
+
+.modal__header .task__btn-delete {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.modal__title {
+    width: 80%;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.modal__body {
+    background: var(--blue);
+    padding: 10px;
+}
+
+.modal__item {
+    margin-bottom: 10px;
+}
+
+.modal__label {
+    font-weight: 600;
+    font-size: 12px;
+    margin-left: 5px;
+    color: #fff;
+}
+
+.modal__input, .modal__textarea {
+    width: 100%;
+    resize: none;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: black;
+    outline: none;
+    border: none;
+}
+
+.modal__textarea {
+    height: 200px;
+    line-height: 1.5;
+}
+
+.modal__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__btn-add {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px 20px;
+    transition: all 0.2s ease;
+}
+.modal__btn-add:hover {
+    background: var(--dark-gray);
+    color: #fff;
+}
