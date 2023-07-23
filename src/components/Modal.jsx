@@ -19,7 +19,10 @@ const Modal = ({active, setActive, title, task, modalType, addTask, editTask}) =
             <div className="modal__content" onClick={e => e.stopPropagation()}>
                 <div className="modal__header">
                     <div className="modal__title">{title ? title : ""}</div>
-                    <IoCloseCircleSharp className='task__btn-delete' onClick={() => setActive()}/>
+                    <IoCloseCircleSharp 
+                        className='task__btn-delete' 
+                        onClick={() => setActive()}
+                    />
                 </div>
                 <form className="modal__body" onSubmit={handleSubmit} ref={formRef}>
                     <div className="modal__item">

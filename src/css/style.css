@@ -11,6 +11,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 0;
+}
+
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:active, :hover, :focus {
+    outline: none;
+    outline-offset: 0;
+}
+
+:focus, :active {
+    outline: none;
+}
+
+a:focus, a:active {
+    outline: none;
 }
 
 button {
@@ -18,6 +38,17 @@ button {
     cursor: pointer;
     outline: none;
     border: none;
+    -ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
 }
 
 body, html {
@@ -35,6 +66,68 @@ body, html {
     padding: 15px 35px;
 }
 
+.header__filter {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__search {
+    position: relative;
+    width: 70%;
+}
+
+.header__input {
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    padding-right: 40px;
+}
+.header__input:focus {
+    outline: 2px solid var(--blue);
+}
+.header__input::placeholder {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.header__btn-close {
+    position: absolute;
+    right: 5px;
+    top: 7px;
+    font-size: 30px;
+    z-index: 2;
+    color: var(--gray);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.header__btn-close:hover {
+    color: var(--blue)
+}
+
+.header__select {
+    width: 25%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+.header__select:focus {
+    outline: 2px solid var(--blue);
+}
+
+.header__option {
+    height: 150px;
+    border: none;
+    outline: none;    
+}
+
 .header__title {
     font-size: 32px;
     font-weight: 600;
@@ -50,7 +143,6 @@ body, html {
     background: var(--blue);
     color: #fff;
 }
-
 
 
 /* Task Item */
@@ -94,10 +186,6 @@ body, html {
     overflow: hidden;
 }
 
-.task__text {
-
-}
-
 .task__btn-delete, .task__btn-edit {
     cursor: pointer;
     margin-left: 10px;
@@ -106,7 +194,6 @@ body, html {
 .task__btn-delete:hover, .task__btn-edit:hover {
     color: var(--blue);
 }
-
 
 
 /* Modal */
@@ -205,4 +292,31 @@ body, html {
 .modal__btn-add:hover {
     background: var(--dark-gray);
     color: #fff;
+}
+
+
+/* Choices */
+
+.choices {
+    width: 100%;
+    color: black;
+    font-weight: 600;
+}
+
+.choices__placeholder {
+    opacity: 1;
+}
+
+.choices__list--dropdown .choices__placeholder {
+    display: none;
+}
+
+.choices__list--dropdown .choices__item--selectable, 
+.choices__list[aria-expanded] .choices__item--selectable {
+    padding: 10px;
+    outline: none;
+}
+
+.is-selected {
+    display: none;
 }

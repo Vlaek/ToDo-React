@@ -11,14 +11,27 @@ const TaskItem = ({task, number, deleteTask, editTask}) => {
             <div className="task__header">
                 <div className="task__title">{number}. {task.title}</div>
                 <div>
-                    <IoHammerSharp className='task__btn-edit' onClick={() => setModalActive(true)}/>
-                    <IoCloseCircleSharp className='task__btn-delete' onClick={() => deleteTask(task.id)}/>
+                    <IoHammerSharp 
+                        className='task__btn-edit' 
+                        onClick={() => setModalActive(true)}
+                    />
+                    <IoCloseCircleSharp 
+                        className='task__btn-delete' 
+                        onClick={() => deleteTask(task.id)}
+                    />
                 </div>
             </div>
             <div className="task__body">
                 <div className="task__text">{task.text}</div>
             </div>
-            <Modal active={modalActive} setActive={setModalActive} title={"Изменить задачу"} task={task} modalType={"Изменить"} editTask={editTask}/>
+            <Modal 
+                active={modalActive} 
+                setActive={setModalActive} 
+                title={"Изменить задачу"} 
+                task={task} 
+                modalType={"Изменить"} 
+                editTask={editTask}
+            />
         </div>
     )
 }

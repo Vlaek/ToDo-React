@@ -13,7 +13,13 @@ const Tasks = ({tasks, deleteTask, editTask}) => {
     return (
         <div>
             {tasks.map((task, index) => 
-                <TaskItem task={task} number={index + 1} key={task.id} deleteTask={deleteTask} editTask={editTask}/>
+                <TaskItem 
+                    task={task} 
+                    number={index + 1} 
+                    key={task.id} 
+                    deleteTask={deleteTask} 
+                    editTask={editTask}
+                />
             )}
         </div>
     )
