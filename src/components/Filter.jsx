@@ -2,7 +2,7 @@ import React from 'react'
 import Input from './UI/Input'
 import Select from './UI/Select'
 
-const Filter = ({filter, setFilter, setSort}) => {
+const Filter = ({setFilter, setSort}) => {
     return (
         <div className='header__filter'>
             <Input 

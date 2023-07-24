@@ -64,10 +64,15 @@ body, html {
     background: #222222;
     color: #fff;
     padding: 15px 35px;
+    position: fixed;
+    left: 0;
+    top: 0;
 }
 
 .header__filter {
-    width: 50%;
+    position: relative;
+    left: 30px;
+    width: 800px;
     display: flex;
     justify-content: space-between;
 }
@@ -131,6 +136,21 @@ body, html {
 .header__title {
     font-size: 32px;
     font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+.header__title:hover {
+    transform: scale(1.05);
+    color: var(--blue);
+}
+.header__title:hover .header__letter {
+    color: #fff;
+}
+
+.header__letter {
+    color: var(--blue)
 }
 
 .header__btn-add {
@@ -150,13 +170,18 @@ body, html {
 .not-tasks {
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    align-items: center;
+    height: 100vh;
 }
 
 .not-tasks__title {
-    font-size: 64px;
+    font-size: 128px;
     font-weight: 600;
     color: #fff;
+}
+
+.task__list {
+    margin-top: 120px;
 }
 
 .task {
@@ -260,6 +285,9 @@ body, html {
     margin-left: 5px;
     color: #fff;
 }
+.modal__label.error {
+    color: red;
+}
 
 .modal__input, .modal__textarea {
     width: 100%;
@@ -294,7 +322,6 @@ body, html {
     color: #fff;
 }
 
-
 /* Choices */
 
 .choices {
@@ -319,4 +346,25 @@ body, html {
 
 .is-selected {
     display: none;
+}
+
+
+/* CSSTransition */
+
+.alert-enter {
+    opacity: 0;
+    transform: scale(0.9);
+}
+.alert-eneter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+}
+.alert-exit {
+    opacity: 1;
+}
+.alert-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 300ms, transform 300ms;
 }

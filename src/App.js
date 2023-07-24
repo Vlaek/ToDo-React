@@ -11,24 +11,54 @@ class App extends Component {
             tasks: [
                 {
                     id: 1,
-                    title: 'Task 1',
-                    text: 'Clack Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, a.'
+                    title: "Task 1",
+                    text: "Complete the first task"
                 },
                 {
                     id: 2,
-                    title: 'Title 1',
-                    text: 'Be Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, a.'
+                    title: "Task 2",
+                    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. At harum laborum labore ea sit veritatis! Rem labore totam eius animi nostrum praesentium quo quos! Veniam aliquam excepturi quaerat modi culpa."
                 },
                 {
                     id: 3,
-                    title: 'Task 3',
-                    text: 'Dite Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ea fugiat, et qui id placeat iure voluptatum cupiditate. Similique aspernatur laborum, optio, nostrum delectus natus fuga culpa nemo quod dignissimos nesciunt laboriosam. Architecto officia necessitatibus corporis ut libero et harum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ea fugiat, et qui id placeat iure voluptatum cupiditate. Similique aspernatur laborum, optio, nostrum delectus natus fuga culpa nemo quod dignissimos nesciunt laboriosam. Architecto officia necessitatibus corporis ut libero et harum!'
+                    title: "Title 3",
+                    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, obcaecati veniam necessitatibus harum dicta deleniti voluptate similique doloremque consectetur! Ullam iure reprehenderit laboriosam neque blanditiis exercitationem quos laborum. Cumque, necessitatibus deserunt vel mollitia eveniet delectus, distinctio voluptates odit non aspernatur ipsum, illum suscipit quia numquam in. Harum corporis excepturi mollitia?"
                 },
                 {
                     id: 4,
-                    title: 'Title 2',
-                    text: 'A Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, a.'
+                    title: "Task 4",
+                    text: "Make progress on the fourth task"
                 },
+                {
+                    id: 5,
+                    title: "Title 5",
+                    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, obcaecati veniam necessitatibus harum dicta deleniti voluptate similique doloremque consectetur! Ullam iure reprehenderit laboriosam neque blanditiis exercitationem quos laborum. Cumque, necessitatibus deserunt vel mollitia eveniet delectus, distinctio voluptates odit non aspernatur ipsum, illum suscipit quia numquam in. Harum corporis excepturi mollitia? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, obcaecati veniam necessitatibus harum dicta deleniti voluptate similique doloremque consectetur! Ullam iure reprehenderit laboriosam neque blanditiis exercitationem quos laborum. Cumque, necessitatibus deserunt vel mollitia eveniet delectus, distinctio voluptates odit non aspernatur ipsum, illum suscipit quia numquam in. Harum corporis excepturi mollitia?"
+                },
+                {
+                    id: 6,
+                    title: "Task 6",
+                    text: "Take a break from the sixth task"
+                },
+                {
+                    id: 7,
+                    title: "Title 7",
+                    text: "Get feedback on the seventh task"
+                },
+                {
+                    id: 8,
+                    title: "Task 8",
+                    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, obcaecati veniam necessitatibus harum dicta deleniti voluptate similique doloremque consectetur! Ullam iure reprehenderit laboriosam neque blanditiis exercitationem quos laborum. Cumque, necessitatibus deserunt vel mollitia eveniet delectus, distinctio voluptates odit non aspernatur ipsum, illum suscipit quia numquam in. Harum corporis excepturi mollitia?"
+                },
+                {
+                    id: 9,
+                    title: "Title 9",
+                    text: "Submit the ninth task for review"
+                },
+                {
+                    id: 10,
+                    title: "Task 10",
+                    text: "Celebrate completing the final task"
+                }
             ],
             modalActive: false,
             filter: {
@@ -40,6 +70,7 @@ class App extends Component {
         this.addTask = this.addTask.bind(this);
         this.editTask = this.editTask.bind(this);
         this.deleteTask = this.deleteTask.bind(this);
+        
         this.setModalActive = this.setModalActive.bind(this);
 
         this.handleSortChange = this.handleSortChange.bind(this);
@@ -53,7 +84,6 @@ class App extends Component {
             <div>
                 <Header 
                     setActive={this.setModalActive}
-                    filter={filteredTasks}
                     setFilter={this.handleQueryChange}
                     setSort={this.handleSortChange}
                 />
@@ -64,9 +94,7 @@ class App extends Component {
                 />
                 <Modal 
                     active={this.state.modalActive} 
-                    setActive={this.setModalActive} 
-                    title={"Добавить задачу"} 
-                    modalType={"Добавить"} 
+                    setActive={this.setModalActive}
                     addTask={this.addTask}
                 />
             </div>

@@ -11,7 +11,7 @@ const Tasks = ({tasks, deleteTask, editTask}) => {
     }
 
     return (
-        <div>
+        <div className='task__list'>
             {tasks.map((task, index) => 
                 <TaskItem 
                     task={task} 

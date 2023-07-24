@@ -3,11 +3,13 @@ import Choices from 'choices.js'
 
 const Select = ({options, defaultValue, onChange}) => {
     React.useEffect(() => {
-        new Choices('.js-choice', {
-            searchEnabled: false,
-            allowHTML: true,
-            itemSelectText: ""
-        });
+        if (!document.querySelector('.js-choice').classList.contains('choices__input')) {
+            new Choices('.js-choice', {
+                searchEnabled: false,
+                allowHTML: true,
+                itemSelectText: ""
+            });
+        }
     }, []);
 
     return (

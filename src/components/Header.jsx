@@ -1,12 +1,18 @@
 import React from 'react'
 import Filter from './Filter'
 
-const Header = ({setActive, filter, setFilter, setSort}) => {
+const Header = ({setActive, setFilter, setSort}) => {
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return (
         <header className='header'>
-            <h1 className="header__title">ToDo</h1>
-            <Filter 
-                filter={filter} 
+            <h1 className="header__title" onClick={scrollToTop}>
+                T<span className='header__letter'>o</span>D<span className='header__letter'>o</span>
+            </h1>
+            <Filter
                 setFilter={setFilter} 
                 setSort={setSort}
             />
