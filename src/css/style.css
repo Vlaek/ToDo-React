@@ -2,7 +2,6 @@
 
 :root {
     --blue: #3e8fa0;
-    --purple: #818ba4;
     --gray: #333;
     --dark-gray: #222;
 }
@@ -52,7 +51,7 @@ input::-ms-clear {
 }
 
 body, html {
-    background: #333333;
+    background: var(--gray);
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
 }
@@ -61,7 +60,7 @@ body, html {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    background: #222222;
+    background: var(--dark-gray);
     color: #fff;
     padding: 15px 35px;
     position: fixed;
@@ -113,24 +112,6 @@ body, html {
 }
 .header__btn-close:hover {
     color: var(--blue)
-}
-
-.header__select {
-    width: 25%;
-    height: 100%;
-    border: none;
-    outline: none;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-}
-.header__select:focus {
-    outline: 2px solid var(--blue);
-}
-
-.header__option {
-    height: 150px;
-    border: none;
-    outline: none;    
 }
 
 .header__title {
@@ -330,6 +311,11 @@ body, html {
     font-weight: 600;
 }
 
+/* Selected option */
+.choices__inner {
+    font-size: 16px;
+}
+
 .choices__placeholder {
     opacity: 1;
 }
@@ -338,10 +324,12 @@ body, html {
     display: none;
 }
 
+/* Options */
 .choices__list--dropdown .choices__item--selectable, 
 .choices__list[aria-expanded] .choices__item--selectable {
     padding: 10px;
     outline: none;
+    font-size: 14px;
 }
 
 .is-selected {
@@ -367,4 +355,81 @@ body, html {
     opacity: 0;
     transform: scale(0.9);
     transition: opacity 300ms, transform 300ms;
+}
+
+
+@media (max-width: 1300px) {
+    .choices__inner  {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .choices__list--dropdown .choices__item--selectable, 
+    .choices__list[aria-expanded] .choices__item--selectable {
+        font-size: 10px;
+    }
+
+    .header__filter {
+        width: 600px;
+        left: -5px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .header__filter {
+        width: 450px;
+        left: -5px;
+    }
+
+    .header__search {
+        width: 65%;
+    }
+
+    .header__select {
+        width: 32%;
+    }
+
+    .header__btn-add {
+        font-size: 12px;
+    }
+
+    .task {
+        width: 600px;
+    }
+}
+
+@media (max-width: 800px) {
+    .header {
+        padding: 10px 15px;
+    }
+
+    .header__title {
+        font-size: 30px;
+        padding: 0;
+    }
+
+    .header__filter {
+        width: 400px;
+    }
+
+    .header__search {
+        width: 60%;
+    }
+
+    .header__select {
+        width: 37%;
+    }
+
+    .header__input {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .header__btn-add {
+        padding: 0px 15px;
+    }
+
+    .task {
+        width: 500px;
+    }
 }
