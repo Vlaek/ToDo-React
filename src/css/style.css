@@ -57,12 +57,13 @@ body, html {
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 100px 3fr 200px 200px;
+    column-gap: 35px;
     width: 100%;
     background: var(--dark-gray);
     color: #fff;
-    padding: 15px 35px;
+    padding: 15px 15px;
     position: fixed;
     left: 0;
     top: 0;
@@ -78,7 +79,7 @@ body, html {
 
 .header__search {
     position: relative;
-    width: 70%;
+    width: 100%;
 }
 
 .header__input {
@@ -117,6 +118,7 @@ body, html {
 .header__title {
     font-size: 32px;
     font-weight: 600;
+    text-align: center;
     color: #fff;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -135,7 +137,7 @@ body, html {
 }
 
 .header__btn-add {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     padding: 0 20px;
     transition: all 0.2s ease;
@@ -313,7 +315,10 @@ body, html {
 
 /* Selected option */
 .choices__inner {
-    font-size: 16px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .choices__placeholder {
@@ -329,7 +334,7 @@ body, html {
 .choices__list[aria-expanded] .choices__item--selectable {
     padding: 10px;
     outline: none;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .is-selected {
@@ -358,10 +363,92 @@ body, html {
 }
 
 
-@media (max-width: 1300px) {
-    .choices__inner  {
+@media (max-width: 1230px) {
+    .header {
+        column-gap: 30px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .header {
+        padding: 10px 15px;
+        display: grid;
+        grid-template-areas: "a o b c"
+                             "d d d d";
+        column-gap: 15px;
+    }
+
+    .header__title {
+        grid-area: a;
+    }
+
+    .header__select {
+        grid-area: b;
+    }
+
+    .header__btn-add {
+        grid-area: c;
+    }
+
+    .header__search {
+        margin-top: 10px;
+        grid-area: d;
+    }
+
+    .choices__inner {
         font-size: 12px;
-        font-weight: 600;
+    }
+
+    .choices__list--dropdown .choices__item--selectable, 
+    .choices__list[aria-expanded] .choices__item--selectable {
+        padding: 10px;
+        outline: none;
+        font-size: 10px;
+    }
+
+    .header__btn-add {
+        font-size: 12px;
+    }
+
+    .task__list {
+        margin-top: 150px;
+    }
+
+    .task {
+        width: 600px;
+        margin: 35px auto;
+    }
+
+    .not-tasks__title {
+        font-size: 72px;
+    }
+}
+
+@media (max-width: 800px) {
+    .header {
+        grid-template-columns: 100px 3fr 150px 150px;
+    }
+
+    .task {
+        width: 500px;
+    }
+}
+
+@media (max-width: 575px) {
+    .header {
+        grid-template-columns: 50px 3fr 130px 90px;
+    }
+
+    .header__title {
+        font-size: 32px;
+    }
+
+    .header__btn-add {
+        font-size: 10px;
+    }
+
+    .choices__inner {
+        font-size: 10px;
     }
 
     .choices__list--dropdown .choices__item--selectable, 
@@ -369,67 +456,69 @@ body, html {
         font-size: 10px;
     }
 
-    .header__filter {
-        width: 600px;
-        left: -5px;
-    }
-}
-
-@media (max-width: 1000px) {
-    .header__filter {
-        width: 450px;
-        left: -5px;
+    .modal__content {
+        width: 300px;
     }
 
-    .header__search {
-        width: 65%;
-    }
-
-    .header__select {
-        width: 32%;
-    }
-
-    .header__btn-add {
-        font-size: 12px;
+    .task__list {
+        margin-top: 130px;
     }
 
     .task {
-        width: 600px;
-    }
-}
-
-@media (max-width: 800px) {
-    .header {
-        padding: 10px 15px;
+        width: 380px;
+        margin: 15px auto;
+        font-size: 14px;
     }
 
-    .header__title {
-        font-size: 30px;
-        padding: 0;
-    }
-
-    .header__filter {
-        width: 400px;
-    }
-
-    .header__search {
-        width: 60%;
-    }
-
-    .header__select {
-        width: 37%;
-    }
-
-    .header__input {
-        font-size: 12px;
+    .task__body {
+        max-height: 138px;
         padding: 10px;
     }
 
-    .header__btn-add {
-        padding: 0px 15px;
+    .not-tasks__title {
+        font-size: 52px;
+    }
+}
+
+@media (max-width: 420px) {
+    .modal__content {
+        width: 300px;
+    }
+
+    .modal__label {
+        font-size: 10px;
+    }
+
+    .modal__header {
+        font-size: 14px;
+        padding-bottom: 0;
+    }
+
+    .modal__item {
+        margin-bottom: 5px;
+    }
+
+    .modal__body {
+        padding: 0 10px 10px;
+    }
+
+    .modal__btn-add {
+        font-size: 12px;
+    }
+
+    .modal__input, .modal__textarea {
+        font-size: 12px;
+    }
+
+    .modal__textarea {
+        height: 150px;
     }
 
     .task {
-        width: 500px;
+        width: 300px;
+    }
+
+    .not-tasks__title {
+        font-size: 42px;
     }
 }

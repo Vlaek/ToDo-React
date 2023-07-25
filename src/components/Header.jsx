@@ -1,5 +1,8 @@
 import React from 'react'
-import Filter from './Filter'
+// import Filter from './Filter'
+import Input from './UI/Input'
+import Select from './UI/Select'
+
 
 const Header = ({setActive, setFilter, setSort}) => {
 
@@ -8,15 +11,29 @@ const Header = ({setActive, setFilter, setSort}) => {
     };
 
     return (
-        <header className='header'>
-            <h1 className="header__title" onClick={scrollToTop}>
-                T<span className='header__letter'>o</span>D<span className='header__letter'>o</span>
-            </h1>
-            <Filter
-                setFilter={setFilter} 
-                setSort={setSort}
-            />
-            <button className="header__btn-add" onClick={setActive}>Добавить</button>
+        <header>
+            <div className="header">
+                <h1 className="header__title" onClick={scrollToTop}>
+                    T<span className='header__letter'>o</span>D<span className='header__letter'>o</span>
+                </h1>
+                {/* <Filter
+                    setFilter={setFilter} 
+                    setSort={setSort}
+                /> */}
+                <Input 
+                    onChange={setFilter}
+                    placeholder="Поиск по названию..."
+                />
+                <Select
+                    defaultValue="Без сортировки"
+                    onChange={setSort}
+                    options={[
+                        {value: 'title', name: 'По названию'},
+                        {value: 'text', name: 'По описанию'},
+                    ]}
+                />
+                <button className="header__btn-add" onClick={setActive}>Добавить</button>
+            </div>
         </header>
     )
 }
