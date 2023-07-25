@@ -1,8 +1,6 @@
 import React from 'react'
-// import Filter from './Filter'
 import Input from './UI/Input'
 import Select from './UI/Select'
-
 
 const Header = ({setActive, setFilter, setSort}) => {
 
@@ -13,13 +11,9 @@ const Header = ({setActive, setFilter, setSort}) => {
     return (
         <header>
             <div className="header">
-                <h1 className="header__title" onClick={scrollToTop}>
+                <h1 className="header__title" onClick={scrollToTop} translate='no'>
                     T<span className='header__letter'>o</span>D<span className='header__letter'>o</span>
                 </h1>
-                {/* <Filter
-                    setFilter={setFilter} 
-                    setSort={setSort}
-                /> */}
                 <Input 
                     onChange={setFilter}
                     placeholder="Поиск по названию..."

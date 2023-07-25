@@ -436,7 +436,7 @@ body, html {
 
 @media (max-width: 575px) {
     .header {
-        grid-template-columns: 50px 3fr 130px 90px;
+        grid-template-columns: 75px 3fr 130px 90px;
     }
 
     .header__title {
