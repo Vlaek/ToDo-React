@@ -522,3 +522,15 @@ body, html {
         font-size: 42px;
     }
 }
+
+@media (max-height: 450px) {
+    .modal__textarea {
+        height: 100px;
+    }
+}
+
+@media (max-height: 350px) {
+    .modal__textarea {
+        height: 75px;
+    }
+}
