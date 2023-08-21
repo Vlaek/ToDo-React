@@ -17,6 +17,8 @@
 * **react-icons** - иконки.
 * **choices.js** - стилизация select.
 * **gh-pages** - деплой проекта на GitHub.
+* TypeScript
+* SCSS
 
 ## Иллюстрации
 ### Главная страница
