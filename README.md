@@ -1,27 +1,36 @@
-# React + TypeScript + Vite
+# React - ToDo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Описание
 
-Currently, two official plugins are available:
+[**ToDo**](https://vlaek.github.io/ToDo-React/) - это пет-проект разработанный на основе React, и представляет собой простую, но эффективную систему управления задачами. Он предоставляет пользователю удобный интерфейс для создания, просмотра и редактирования списка задач. Также имеется возможность фильтрации и сортировки задач.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Основные возможности проекта включают:
 
-## Expanding the ESLint configuration
+* **Создание задач** - пользователи могут легко добавлять новые задачи с описанием.
+* **Просмотр задач** - задачи отображаются в удобном списке.
+* **Фильтрация задач** - задачи можно отсортировать, либо же воспользоваться поиском.
+* **Редактирование и обновление задач** - пользователи могут легко редактировать существующие задачи.
+* **Удаление задач** - если задача больше не актуальна, пользователь может легко удалить ее из списка.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Дополнительные зависимости:
+* **HTML, CSS, JS**
+* **React**
+* **react-transition-group**
+* **react-icons**
+* **TypeScript**
+* **SCSS**
+* **gh-pages**
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Иллюстрации
+### Главная страница
+![Главная страница](https://i.imgur.com/ikk0AHa.gif "Главная страница")
+### Модальное окно добавления новой задачи
+![Создание задачи](https://i.imgur.com/fMjgHoD.gif "Создание задачи")
+### Модальное окно редактирования задачи
+![Редактирование задачи](https://i.imgur.com/eGZ6ojm.gif "Редактирование задачи")
+### Удаление задачи
+![Удаление задачи](https://i.imgur.com/WYT5Ez7.gif "Удаление задачи")
+### Поиск задачи
+![Поиск задачи](https://i.imgur.com/AnWOzTz.gif "Поиск задачи")
+### Сортировка задач
+![Сортировка задач](https://i.imgur.com/N1P3Ayx.gif "Сортировка задач")
