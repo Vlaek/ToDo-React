@@ -2,7 +2,7 @@ import React, { useState, useRef, FC } from "react";
 import { IoCloseCircleSharp, IoHammerSharp } from "react-icons/io5";
 import { CSSTransition } from "react-transition-group";
 import Modal from "./Modal";
-import { IDeleteTask, IEditTask, ISetModalActive, ITask } from "./types/types";
+import { IDeleteTask, IEditTask, ISetModalActive, ITask } from "../types/types";
 
 interface TaskItemProps {
     task: ITask;

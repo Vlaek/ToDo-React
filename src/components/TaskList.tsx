@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import TaskItem from "./TaskItem";
-import { IDeleteTask, IEditTask, ISetModalActive, ITask } from "./types/types";
+import { IDeleteTask, IEditTask, ISetModalActive, ITask } from "../types/types";
 
 interface TasksProps {
     tasks: ITask[];

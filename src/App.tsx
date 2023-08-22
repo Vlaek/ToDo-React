@@ -2,7 +2,7 @@ import React, { FC, useState } from "react";
 import Header from "./components/Header";
 import Modal from "./components/Modal";
 import TaskList from "./components/TaskList";
-import { IFilter, ITask, Option } from "./components/types/types";
+import { IFilter, ITask, Option } from "./types/types";
 import { data } from "./data";
 
 const App: FC = () => {

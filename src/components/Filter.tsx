@@ -2,7 +2,7 @@ import React, { FC, useState } from "react";
 import Input from "./UI/Input";
 // import Select from './UI/Select'
 import Select from "react-select";
-import { SetFilterFunc, SetSortFunc } from "./types/types";
+import { SetFilterFunc, SetSortFunc } from "../types/types";
 
 interface Option {
     value: string;

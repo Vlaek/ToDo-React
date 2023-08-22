@@ -1,4 +1,4 @@
-import { ITask } from "./components/types/types";
+import { ITask } from "./types/types";
 
 export const data: ITask[] = [
     {
