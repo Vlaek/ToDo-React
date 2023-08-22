@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap");
 
 :root {
     --blue: #3e8fa0;
@@ -13,36 +13,44 @@
     border: 0;
 }
 
-*, *:before, *:after {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-:active, :hover, :focus {
+:active,
+:hover,
+:focus {
     outline: none;
     outline-offset: 0;
 }
 
-:focus, :active {
+:focus,
+:active {
     outline: none;
 }
 
-a:focus, a:active {
+a:focus,
+a:active {
     outline: none;
 }
 
 button {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     cursor: pointer;
     outline: none;
     border: none;
     -ms-text-size-adjust: 100%;
-	-moz-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 
-input, button, textarea {
+input,
+button,
+textarea {
     font-family: inherit;
 }
 
@@ -50,15 +58,16 @@ input::-ms-clear {
     display: none;
 }
 
-body, html {
+body,
+html {
     background: var(--gray);
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 20px;
 }
 
 .header {
     display: grid;
-    grid-template-columns: 100px 3fr 200px 200px;
+    grid-template-columns: 100px 1fr 200px;
     column-gap: 35px;
     width: 100%;
     background: var(--dark-gray);
@@ -72,14 +81,13 @@ body, html {
 .header__filter {
     position: relative;
     left: 30px;
-    width: 800px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 60% 20%;
 }
 
 .header__search {
     position: relative;
-    width: 100%;
+    width: 90%;
 }
 
 .header__input {
@@ -112,7 +120,7 @@ body, html {
     transition: all 0.2s ease;
 }
 .header__btn-close:hover {
-    color: var(--blue)
+    color: var(--blue);
 }
 
 .header__title {
@@ -133,7 +141,7 @@ body, html {
 }
 
 .header__letter {
-    color: var(--blue)
+    color: var(--blue);
 }
 
 .header__btn-add {
@@ -146,7 +154,6 @@ body, html {
     background: var(--blue);
     color: #fff;
 }
-
 
 /* Task Item */
 
@@ -194,15 +201,16 @@ body, html {
     overflow: hidden;
 }
 
-.task__btn-delete, .task__btn-edit {
+.task__btn-delete,
+.task__btn-edit {
     cursor: pointer;
     margin-left: 10px;
     transition: all 0.2s ease;
 }
-.task__btn-delete:hover, .task__btn-edit:hover {
+.task__btn-delete:hover,
+.task__btn-edit:hover {
     color: var(--blue);
 }
-
 
 /* Modal */
 
@@ -272,11 +280,12 @@ body, html {
     color: red;
 }
 
-.modal__input, .modal__textarea {
+.modal__input,
+.modal__textarea {
     width: 100%;
     resize: none;
     padding: 10px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 600;
     color: black;
     outline: none;
@@ -307,14 +316,14 @@ body, html {
 
 /* Choices */
 
-.choices {
+/* .choices {
     width: 100%;
     color: black;
     font-weight: 600;
 }
 
 /* Selected option */
-.choices__inner {
+/* .choices__inner {
     font-size: 14px;
     display: flex;
     justify-content: center;
@@ -327,10 +336,10 @@ body, html {
 
 .choices__list--dropdown .choices__placeholder {
     display: none;
-}
+} */
 
 /* Options */
-.choices__list--dropdown .choices__item--selectable, 
+/* .choices__list--dropdown .choices__item--selectable,
 .choices__list[aria-expanded] .choices__item--selectable {
     padding: 10px;
     outline: none;
@@ -339,8 +348,7 @@ body, html {
 
 .is-selected {
     display: none;
-}
-
+} */
 
 /* CSSTransition */
 
@@ -362,6 +370,27 @@ body, html {
     transition: opacity 300ms, transform 300ms;
 }
 
+.header__select {
+    font-size: 16px;
+    color: #000;
+    border-radius: 0px;
+    border: none;
+}
+
+.header__select__control {
+    border: none;
+    box-shadow: none;
+    border-radius: 0px !important;
+    height: 100%;
+}
+
+.header__select__option {
+    color: #000;
+}
+
+.header__select__option--is-selected {
+    background-color: #f0f0f0;
+}
 
 @media (max-width: 1230px) {
     .header {
@@ -373,8 +402,9 @@ body, html {
     .header {
         padding: 10px 15px;
         display: grid;
-        grid-template-areas: "a o b c"
-                             "d d d d";
+        grid-template-areas:
+            "a o b c"
+            "d d d d";
         column-gap: 15px;
     }
 
@@ -399,7 +429,7 @@ body, html {
         font-size: 12px;
     }
 
-    .choices__list--dropdown .choices__item--selectable, 
+    .choices__list--dropdown .choices__item--selectable,
     .choices__list[aria-expanded] .choices__item--selectable {
         padding: 10px;
         outline: none;
@@ -451,7 +481,7 @@ body, html {
         font-size: 10px;
     }
 
-    .choices__list--dropdown .choices__item--selectable, 
+    .choices__list--dropdown .choices__item--selectable,
     .choices__list[aria-expanded] .choices__item--selectable {
         font-size: 10px;
     }
@@ -506,7 +536,8 @@ body, html {
         font-size: 12px;
     }
 
-    .modal__input, .modal__textarea {
+    .modal__input,
+    .modal__textarea {
         font-size: 12px;
     }
 
