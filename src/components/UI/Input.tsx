@@ -9,7 +9,12 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     ({ setFilter }, ref: ForwardedRef<HTMLInputElement>) => {
         return (
             <div className="header__search">
-                <input className="header__input" ref={ref} onChange={setFilter} />
+                <input
+                    className="header__input"
+                    ref={ref}
+                    onChange={setFilter}
+                    placeholder="Найти..."
+                />
                 <IoCloseSharp
                     className="header__btn-close"
                     onClick={(e: any) => {
