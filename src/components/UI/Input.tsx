@@ -1,4 +1,4 @@
-import React, { FC, ForwardedRef } from "react";
+import React, { ForwardedRef } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, FC } from "react";
 import { IoCloseCircleSharp } from "react-icons/io5";
-import { IAddTask, IEditTask, ISetModal, ISetModalActive, ITask } from "../types/types";
+import { IAddTask, IEditTask, ISetModal, ITask } from "../types/types";
 
 interface ModalProps {
     task: ITask | null;

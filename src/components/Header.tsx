@@ -1,6 +1,4 @@
-import React, { FC } from "react";
-// import Input from './UI/Input'
-// import Select from './UI/Select'
+import { FC } from "react";
 import { ISetModalActive, SetFilterFunc, SetSortFunc } from "../types/types";
 import Filter from "./Filter";
 
