@@ -187,7 +187,6 @@ html {
 .task {
     margin: 50px auto;
     width: 800px;
-    background: var(--blue);
     color: #fff;
 
     &__header {
@@ -208,6 +207,7 @@ html {
         padding: 15px;
         max-height: calc(200px - 15px);
         overflow: hidden;
+        background: var(--blue);
     }
 
     &__btn-delete,

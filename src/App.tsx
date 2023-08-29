@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useState, useEffect } from "react";
 import Header from "./components/Header";
 import Modal from "./components/Modal";
 import TaskList from "./components/TaskList";
@@ -6,13 +6,25 @@ import { IFilter, ITask, Option } from "./types/types";
 import { data } from "./data";
 
 const App: FC = () => {
-    const [tasks, setTasks] = useState<ITask[]>(data);
+    const getFromLocalStorage = (key: string) => {
+        const value = localStorage.getItem(key);
+        if (value) {
+            return JSON.parse(value);
+        }
+        return [];
+    };
+
+    const [tasks, setTasks] = useState<ITask[]>(getFromLocalStorage("tasks"));
     const [showModal, setShowModal] = useState(false);
     const [filter, setFilter] = useState<IFilter>({
         sort: "",
         query: "",
     });
     const [fullTask, setFullTask] = useState<ITask | null>(null);
+
+    useEffect(() => {
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+    }, [tasks]);
 
     const handleSortChange = (option: Option) => {
         setFilter({ ...filter, sort: option.value });
