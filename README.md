@@ -13,12 +13,9 @@
 * **Удаление задач** - если задача больше не актуальна, пользователь может легко удалить ее из списка.
 
 Дополнительные зависимости:
-* **HTML, CSS, JS**
-* **React**
-* **react-transition-group**
-* **react-icons**
-* **TypeScript**
-* **SCSS**
+* **HTML, CSS, SASS, JavaScript, React, TypeScript**
+* **React Transition**
+* **React Icons**
 * **gh-pages**
 
 ## Иллюстрации
